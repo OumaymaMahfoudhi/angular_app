@@ -1,0 +1,24 @@
+<h2> Publication List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Sujet</th>
+            <th> Société </th>
+            <th> Contact</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let Publication of Publication" >
+            <td> {{ Publication.sujet }} </td>
+            <td> {{ Publication.societe }} </td>
+            <td> {{ Publication.contact }} </td>
+            <td>
+                <button (click) = "UpdatePublication(Publication.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deletePublication(Publication.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "publicationDetails(Publication.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

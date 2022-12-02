@@ -1,0 +1,25 @@
+
+
+
+<body>
+    <header>
+        <h1>Isitcom</h1>
+        <script>const validarLogin = () => {
+          alert('Teste');
+        } </script>
+    </header>
+    <main>
+        <form id="login_form" class="form_class"  >
+            <div class="form_div">
+                <label>Login:</label>
+                <input class="field_class" [(ngModel)]="user.email" id="email"  name="email" type="text" placeholder="Enter Email" autofocus>
+                <label>Password:</label>
+                <input class="field_class" type="password"  [(ngModel)]="user.password" name="password"  id="password" placeholder="Enter Password" autofocus>
+                <button class="submit_class" type="submit" (click)="userLogin()" >Login</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>Bienvenue</p>
+    </footer>
+</body>
